@@ -173,7 +173,7 @@ header {
     left: 300px;
 }
 
-.banner-txt .go{
+.banner-txt .go {
     text-decoration: underline;
     font-size: 16px;
     padding-top: 25px;
@@ -268,7 +268,7 @@ header {
     position: relative;
 }
 
-.about01 img{
+.about01 img {
     position: absolute;
     display: inline-block;
     left: 50%;
@@ -399,7 +399,7 @@ header {
 /* 컨텐츠 2 : 시작 */
 .about02-bg {
     height: 840px;
-    background: url(../images/bg.png) no-repeat;
+    background: url(../images/bg.png) no-repeat center top / cover;
     margin-bottom: 120px;
 }
 
@@ -523,11 +523,12 @@ header {
 /* 콘텐츠 3 : 끝 */
 /* 콘텐츠 4 : 시작 */
 .about04 {
-    width: 1607px;
+    max-width: 1607px;
     margin: 0px auto 200px;
 }
 
 .about04 img {
+    width: 100%;
     display: block;
 }
 
@@ -553,6 +554,13 @@ header {
 
 .event-banner li:hover {
     border: 1px solid #A7E0F8;
+}
+
+.about04 .event-banner li:nth-child(3) a:hover{
+    background: #A7E0F8 url(../images/Group140_bover.png) no-repeat left top/cover;
+}
+.about04 .event-banner li:nth-child(3) a:hover img{
+    opacity: 0;
 }
 
 /* 콘텐츠 4 : 끝 */
@@ -606,6 +614,7 @@ header {
 }
 
 .best-slide {
+    max-width: 1920px;
     margin-bottom: 150px;
     width: 95%;
     margin-left: auto;
@@ -652,7 +661,7 @@ header {
     font-size: 14px;
     color: #999999;
 }
-
+/* 태그 */
 .best-slide .b-tag {
     z-index: 50;
     position: absolute;
@@ -686,6 +695,18 @@ header {
     border-radius: 0 0 20px 0;
 }
 
+.best-slide .n-tag {
+    z-index: 50;
+    position: absolute;
+    display: inline-block;
+    background-color: #83bc75;
+    padding: 5px 20px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 0 0 20px 0;
+}
+
+
 .best-slide .blue-tag {
     color: #78BEDA;
 }
@@ -709,29 +730,29 @@ header {
     background-color: #eff7fb;
 }
 
-.best-slide .swiper-button-next{
-    left: 1740px;
+.best-slide .swiper-button-next {
+    left: auto;
+    right: 50px;
 }
 
-.best-slide .swiper-button-next:after{
+.best-slide .swiper-button-next:after {
     display: none;
 }
 
 /* 콘텐츠 5 : 끝 */
-/* 콘첸츠 6 : 시작 */
+/* 콘텐츠 6 : 시작 */
 .about06 {
     margin-bottom: 150px;
 }
 
 .category {
-    width: 1732px;
+    max-width: 1732px;
     display: flex;
     margin: auto;
     gap: 50px;
 }
 
 .c11 {
-    width: 841px;
     height: 340px;
     background: url(../images/tilamisu-keikeu-du-jogaggwa-huinsaeg-pyomyeon-e-cha-hanjan.png);
     transition: transform 0.3s ease;
@@ -741,6 +762,7 @@ header {
     transform: translateY(-8px);
 }
 
+/* 텍스트 */
 .cat-ttl {
     display: flex;
     gap: 30px;
@@ -748,21 +770,27 @@ header {
     padding-left: 50px;
 }
 
-.cat-ttl h1 {
+.cat-ttl h1,.cat-ttl-b h1 {
     font-weight: 32px;
     font-family: "Playfair Display", serif;
     color: #2b2b2b;
 }
 
-.cat-ttl p {
+.cat-ttl p, .cat-ttl-b p {
     padding: 5px;
     font-size: 18px;
     line-height: 22px;
     color: 333333;
 }
+/* 텍스트 : 오른쪽 */
+.cat-ttl-b {
+    display: flex;
+    gap: 30px;
+    padding-top: 645px;
+    padding-left: 50px;
+}
 
 .c22 {
-    width: 841px;
     height: 340px;
     background: url(../images/shop1_15295701097378.png);
     margin-top: 39px;
@@ -773,12 +801,16 @@ header {
     transform: translateY(-8px);
 }
 
+.c01 {
+    width: 48%;
+}
 
 .c02 {
-    width: 841px;
+    width: 48%;
     height: 719px;
     background-color: #ccc;
     transition: transform 0.3s ease;
+    background: url(../images/moments3.png);
 }
 
 .c02:hover {
@@ -795,7 +827,8 @@ header {
     color: #333;
     font-size: 36px;
     font-family: "Playfair Display", serif;
-    margin-left: 780px;
+    width: 48%;
+    text-align: right;
 }
 
 .about07-c {
@@ -804,11 +837,14 @@ header {
 }
 
 .about07-img {
-    width: 100%;
-    background-image: url(../images/hwaiteu-teibeul-nop-eun-gagdobogie-juseuwa-cheondo-bogsung-a.png);
+    width: 48%;
+    background: url(../images/hwaiteu-teibeul-nop-eun-gagdobogie-juseuwa-cheondo-bogsung-a.png) no-repeat center center / cover;
     width: 930px;
-    height: 500px;
     position: relative;
+}
+
+.about07-shop {
+    width: 48%;
 }
 
 .about07-shop .swiper-wrapper {
@@ -824,13 +860,66 @@ header {
     width: 100%;
     align-items: center;
 }
+/* 상품슬라이드 */
+/* 상품1 */
+.about07-shop .sea01 {
+    display: block;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background:url(../images/seasonal1.png) center center/cover;
+    transition: 0.5s;
+}
+
+.about07-shop ul:hover .sea01{
+    background: url(../images/seasonal_hover1.png) center center/cover;
+}
+/* 상품2 */
+.about07-shop .sea02 {
+    display: block;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background:url(../images/seasonal2.png) center center/cover;
+    transition: 0.5s;
+}
+
+.about07-shop ul:hover .sea02{
+    background: url(../images/seasonal_hover2.png) center center/cover;
+}
+/* 상품3 */
+.about07-shop .sea03 {
+    display: block;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background:url(../images/seasonal3.png) center center/cover;
+    transition: 0.5s;
+}
+
+.about07-shop ul:hover .sea03{
+    background: url(../images/seasonal_hover3.png) center center/cover;
+}
+/* 상품4 */
+.about07-shop .sea04 {
+    display: block;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background:url(../images/seasonal4.png) center center/cover;
+    transition: 0.5s;
+}
+
+.about07-shop ul:hover .sea04{
+    background: url(../images/seasonal_hover4.png) center center/cover;
+}
 
 .about07-shop .img {
     display: block;
     width: 130px;
     height: 130px;
     border-radius: 50%;
-    background-color: #ccc;
+    background-color: #91D6F2;
 }
 
 .about07-shop ul {
@@ -998,7 +1087,7 @@ header {
     transform-origin: left;
 }
 
-/* 메인배너 슬라이더 : 시작*/
+/* 오프라인 슬라이더 : 시작*/
 .offline02 .swiper-pagination.swiper-pagination-bullets {
     display: flex;
     flex-direction: column;
@@ -1050,7 +1139,8 @@ header {
     font-size: 32px;
     color: #78BEDA;
 }
-
+/* 오프라인 슬라이더 : 끝 */
+/* 콘텐츠 8 : 끝 */
 /* 콘텐츠 9 : 시작 */
 .community01-1 {
     width: 1320px;
@@ -1060,7 +1150,7 @@ header {
     gap: 10px;
 }
 
-.community01-1 img{
+.community01-1 img {
     display: block;
     width: 29px;
     height: 29px;
@@ -1077,12 +1167,12 @@ header {
     position: relative;
 }
 
-.community01-2 p{
+.community01-2 p {
     color: #666;
     font-weight: 300;
 }
 
-.community01-2 span{
+.community01-2 span {
     font-weight: bold;
 }
 
@@ -1101,7 +1191,6 @@ header {
     top: 3%;
     width: 20%;
     height: auto;
-    object-fit: cover;
 }
 
 .community01-2 .com-img03 {
@@ -1263,14 +1352,14 @@ header {
 
 /* 콘텐츠 10 : 끝 */
 /* 콘텐츠 11 : 시작 */
-.service {
+#service {
     height: 560px;
     background-image: url(../images/bg2.png);
 }
 
 .ser {
-    width: 1450px;
-    margin-left: 300px;
+    max-width: 1450px;
+    margin: auto;
     display: flex;
     justify-content: space-between;
 }
@@ -1287,7 +1376,7 @@ header {
     font-family: "Playfair Display", serif;
 }
 
-.service-ttl p{
+.service-ttl p {
     color: #7191A1;
 }
 
@@ -1314,27 +1403,27 @@ header {
 }
 
 /* 호버 시 색상 변경 */
-.ser-menu:hover>a>img{
+.ser-menu:hover>a>img {
     filter: invert(1);
 }
 
-.ser-menu:hover h3{
+.ser-menu:hover h3 {
     color: #fff;
 }
 
-.ser-menu:hover p{
+.ser-menu:hover p {
     color: #fff;
 }
 
-.ser-menu:hover a{
+.ser-menu:hover a {
     color: #fff;
 }
 
-.ser-menu:hover img{
+.ser-menu:hover img {
     filter: saturate(0) brightness(100);
 }
 
-.ser-link{
+.ser-link {
     display: flex;
     align-items: center;
     justify-content: right;
@@ -1344,7 +1433,7 @@ header {
     z-index: 1;
 }
 
-.goto{
+.goto {
     color: #78BEDA;
     font-size: 16px;
 }
@@ -1364,7 +1453,7 @@ header {
 .ser-menu {
     position: relative;
     overflow: hidden;
-    
+
 }
 
 .ser-menu>a>img {
@@ -1377,30 +1466,35 @@ header {
 
 /* 물이 차오르는 버튼 효과 */
 @keyframes rotate {
-  from { transform: rotate(0deg); }
-  from { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+
+    from {
+        transform: rotate(360deg);
+    }
 }
 
 .wave {
-  position: absolute;
-  bottom: 50%;
-  left: 25%;
-  background: #91D6F2;
-  width: 500px;
-  height: 500px;
-  margin-left: -150px;
-  margin-bottom: -700px;
-  transform-origin: 50% 48%;
-  border-radius: 43%;
-  
-  transition-duration: 0.75s;
-  transition-property: margin-bottom;
-  transition-timing-function: ease;
+    position: absolute;
+    bottom: 50%;
+    left: 25%;
+    background: #91D6F2;
+    width: 500px;
+    height: 500px;
+    margin-left: -150px;
+    margin-bottom: -700px;
+    transform-origin: 50% 48%;
+    border-radius: 43%;
+
+    transition-duration: 0.75s;
+    transition-property: margin-bottom;
+    transition-timing-function: ease;
 }
 
 .ser-menu:hover .wave {
-  margin-bottom: -300px;
-  animation: rotate 2000ms infinite linear;
+    margin-bottom: -300px;
+    animation: rotate 2000ms infinite linear;
 }
 
 
@@ -1414,8 +1508,8 @@ footer {
 }
 
 .footer-in {
-    width: 1426px;
-    padding-left: 290px;
+    max-width: 1426px;
+    margin: auto;
     display: flex;
     gap: 0 130px;
     padding-top: 95px;
@@ -1504,3 +1598,30 @@ footer {
 }
 
 /* 푸터 : 끝 */
+/* 떠있는 버튼 */
+.floating-button {
+  position: fixed;
+  bottom: 6%;
+  right: 3%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 999;
+}
+
+.floating-button img{
+    display: block;
+}
+
+.top-btn {
+  transition: transform 0.3s ease;
+}
+
+.top-btn:hover {
+  transform: translateY(-6px);
+}
+
+/* 스크롤 부드럽게 */
+html {
+    scroll-behavior: smooth;
+}
