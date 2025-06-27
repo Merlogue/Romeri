@@ -1184,6 +1184,10 @@ header {
     width: 20%;
 }
 
+.com-img01 img{
+     max-width: 375px;
+}
+
 .community01-2 .com-img02 {
     display: block;
     position: absolute;
@@ -1191,6 +1195,10 @@ header {
     top: 3%;
     width: 20%;
     height: auto;
+}
+
+.com-img02 img{
+    max-width: 350px;
 }
 
 .community01-2 .com-img03 {
@@ -1218,8 +1226,8 @@ header {
 .varti {
     writing-mode: vertical-rl;
     position: absolute;
-    left: 79%;
-    top: 38%;
+    right: -30px;
+    top: 0;
 }
 
 .txt-02 {
@@ -1260,6 +1268,7 @@ header {
     width: 80%;
     /* max-width: 1422px; */
     margin: 0px auto 150px;
+    min-width: 1320px;
 }
 
 .community02-ttl {
@@ -1275,10 +1284,10 @@ header {
 }
 
 .center {
-    width: 1320px;
-    height: 572px;
+    width: 100%;
+    box-sizing: border-box;
     margin: auto;
-    padding: 60px;
+    padding: 0 60px 0px 60px;
 }
 
 
@@ -1548,6 +1557,15 @@ footer {
 .footer-sim {
     display: flex;
     margin-bottom: 26px;
+}
+
+.footer-sim img{
+    opacity: 0.7;
+    transition: 0.3s ease;
+}
+
+.footer-sim a:hover img{
+    opacity: 1;
 }
 
 .footer-left .footer-menu {
