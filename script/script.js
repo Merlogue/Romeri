@@ -95,7 +95,7 @@
     // 갤러리 센터
     var swiper4 = new Swiper(".center", {
       slidesPerView: 3,
-      spaceBetween: 30,
+      spaceBetween: 10,
       centeredSlides: true,
       navigation: {
         nextEl: ".center .swiper-button-next",
