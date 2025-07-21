@@ -36,7 +36,8 @@ header {
 }
 
 .top-bar {
-    width: 1770px;
+    width:100%;
+    max-width: 1770px;
     height: 100px;
     align-items: center;
     margin: auto;
