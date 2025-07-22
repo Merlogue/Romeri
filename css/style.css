@@ -1655,3 +1655,10 @@ footer {
 html {
     scroll-behavior: smooth;
 }
+
+/* 반응형 */
+@media (max-width: 1855px) {
+ .swiper-pagination {
+        display:none;
+ }
+}
