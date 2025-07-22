@@ -1658,7 +1658,7 @@ html {
 
 /* 반응형 */
 @media (max-width: 1855px) {
- .swiper-pagination {
-        display:none;
- }
+  .offline02 .swiper-pagination.swiper-pagination-bullets {
+    display: none;
+  }
 }
